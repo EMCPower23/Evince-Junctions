@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1DLBSH56F0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1DLBSH56F0');
+</script>
+  
+  <title>Services | Evince Junctions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0e0e10;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #101014;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .logo img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      animation: pulseGlow 2s infinite ease-in-out;
+      box-shadow: 0 0 20px #f57c00, 0 0 40px #f57c00 inset, 0 0 10px rgba(255, 140, 0, 0.5);
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #f57c00;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f57c00;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #fff;
+      margin: 4px 0;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #1b1b2f, #162447);
+    }
+
+    .hero h1 {
+      color: #f57c00;
+      font-size: 2.8rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 800px;
+      margin: 20px auto 0;
+    }
+
+    .services-list {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .services-list h2 {
+      color: #f57c00;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .services-list h3{
+      color: #f57c00;
+     
+      margin-bottom: 5px;
+    }
+
+    .services-list ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #ddd;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .packages h2 {
+      color: #f57c00;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .package {
+      background-color: #1f1f2e;
+      border-radius: 8px;
+      padding: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .package:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 4px 20px rgba(245, 124, 0, 0.2);
+    }
+
+    .package h3 {
+      color: #f57c00;
+      margin-bottom: 10px;
+    }
+
+    .package p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .package ul {
+      margin-top: 10px;
+      padding-left: 20px;
+      color: #bbb;
+    }
+
+    footer {
+      background-color: #101014;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 20px #f57c00, 0 0 40px #f57c00 inset, 0 0 10px rgba(255, 140, 0, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 40px #ff9900, 0 0 60px #ff9900 inset, 0 0 20px rgba(255, 180, 50, 0.6);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="EJlogo-official.png" alt="Evince Junctions Logo">
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Your Vision, Our Expertise</h1>
+    <p>Choose a plan that scales with you — from startup spark to industry dominance.</p>
+  </section>
+
+  <section class="services-list">
+    <h2>Some of What We Offer</h2>
+    <ul>
+       <strong> <h3><li>Free intial consulation</li></h3></strong><br>
+      <strong><li><h3>Digital Marketing:</h3></li></strong> <li>SEO</li> <li>SEM</li> <li>Social Media Management</li> <li>Email Marketing</li><br>
+      <strong><li><h3>Analytics:</h3></li></strong> <li>BI Forecasting</li> <li>Financial & Operational</li> <li>Healthcare Industry Benchmarking</li><br>
+      <strong><li><h3>Web Design:</h3></li></strong> <li>Creation & Maintenance</li><br>
+      <strong><li><h3>Web Development:</h3></li></strong> <li>Creation & Maintenance</li><br>
+    </ul>
+  </section>
+
+  <section class="packages">
+    <p><h2>Our Packages</h2></p>
+
+    <div class="package">
+      <h3>Spark (Essential)</h3>
+      <p>Perfect for small businesses taking their first digital step.</p>
+      <ul>
+        <li>Website/App Maintenance</li>
+        <li>1-page SEO Optimization</li>
+        <li>Basic Social Media Management</li>
+        <li>Monthly Analytics Report</li>
+        <li>30 hrs Strategy Support</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>Momentum (Growth)</h3>
+      <p>For growing businesses ready to scale digital reach.</p>
+      <ul>
+        <li>Includes Spark Features</li>
+        <li>Web Design (5 Pages)</li>
+        <li>SEO Strategy</li>
+        <li>Social Media (3 Platforms)</li>
+        <li>Email Marketing</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>Catalyst (Premium)</h3>
+      <p>Full-service marketing and analytics solution.</p>
+      <ul>
+        <li>Includes Momentum Features</li>
+        <li>Custom Web/App Development</li>
+        <li>Predictive Analytics</li>
+        <li>Full SEO Suite</li>
+        <li>Biweekly Strategy Meetings</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>Nexus (Custom)</h3>
+      <p>Fully tailored solutions built for unique business goals.</p>
+      <ul>
+        <li>Build Your Own Plan</li>
+        <li>A la Carte Add-Ons</li>
+        <li>Branding, Video, UX/UI</li>
+        <li>Strategy Coaching</li>
+        <li>Custom Pricing</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Evince Junctions. All rights reserved.
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('#nav-menu a');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
+

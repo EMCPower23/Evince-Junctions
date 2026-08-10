@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1DLBSH56F0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1DLBSH56F0');
+</script>
+
+  <title>About Us | Evince Junctions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0e0e10;
+      color: #ffffff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #101014;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .logo img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      animation: pulseGlow 2s infinite ease-in-out;
+      box-shadow: 0 0 20px #f57c00, 0 0 40px #f57c00 inset, 0 0 10px rgba(255, 140, 0, 0.5);
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      margin: 10px 0;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #f57c00;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f57c00;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #1b1b2f, #162447);
+      padding: 100px 20px;
+      text-align: center;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .about-section {
+      padding: 100px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .about-section h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #f57c00;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .about-values {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .value {
+      background-color: #1f1f2e;
+      padding: 30px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .value:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 4px 20px rgba(245, 124, 0, 0.2);
+    }
+
+    .value h3 {
+      color: #f57c00;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #101014;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #fff;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 20px #f57c00, 0 0 40px #f57c00 inset, 0 0 10px rgba(255, 140, 0, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 40px #ff9900, 0 0 60px #ff9900 inset, 0 0 20px rgba(255, 180, 50, 0.6);
+      }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: flex;
+        align-self: flex-end;
+        margin-top: -30px;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-top: 10px;
+        gap: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="EJlogo-official.png" alt="Evince Junctions Logo"></div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <div class="hero">
+      <h1>About Evince Junctions</h1>
+      <p>
+        Evince Junctions was founded on the belief that technology and strategy can transform businesses when connected with clarity, intention, and purpose. We specialize in delivering modern digital solutions — from app and web development to business & data analytics, digital marketing, and strategic consulting.
+      </p>
+      <br>
+      <h1>Our Team</h1>
+      <p>
+        Founded in 2025. Together we form a team of highly sophisticated, and skilled individuals. With a range of advanced skills and credentials in business, technology, digital marketing, and strategic consulting. Together we can help each other flourish by making our team apart of yours.
+      </p>
+    </div>
+
+    <div class="about-values">
+      <div class="value">
+        <h3>Innovation</h3>
+        <p>We create cutting-edge solutions that solve real problems with elegance and efficiency.</p>
+      </div>
+      <div class="value">
+        <h3>Integrity</h3>
+        <p>Trust, transparency, and consistency guide every client interaction and project execution.</p>
+      </div>
+      <div class="value">
+        <h3>Impact</h3>
+        <p>Our work is grounded in measurable results that empower your growth and vision.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Evince Junctions. All rights reserved.
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('#nav-menu a');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
