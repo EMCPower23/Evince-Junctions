@@ -20,7 +20,7 @@
 <meta name="robots" content="index, follow">
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+  <link rel="canonical" href="https://evincejunctions.com/contact.html">
 <style>
 
 *{
@@ -669,7 +669,7 @@ Whether you're launching a new website, building an application, improving your 
 
 <p>
     <a href="tel:+17088213891">
-        <img src="phone.png" alt="Phone">
+        <img src="phone.png" alt="Phone icon">
         (708) 821-3891
     </a>
     
@@ -683,7 +683,7 @@ Whether you're launching a new website, building an application, improving your 
 
 <p>
     <a href="mailto:evincejunctions@gmail.com">
-        <img src="gmail..png" alt="Email">
+        <img src="gmail..png" alt="Email icon">
         <span>evincejunctions@gmail.com</span>
     </a>
     </p>
@@ -697,7 +697,7 @@ Whether you're launching a new website, building an application, improving your 
 <p>
     <a href="https://www.instagram.com/evincejunctions"
     target="_blank">
-    <img src="IG.png" alt="Instagram">
+    <img src="IG.png" alt="Instagram icon">
     <span>@EvinceJunctions</span>
     </a>
     </p>
@@ -711,7 +711,7 @@ Whether you're launching a new website, building an application, improving your 
 <p>
     <a href="https://www.facebook.com/evincejunctions"
     target="_blank">
-    <img src="FB.jpg" alt="Facebook">
+    <img src="FB.jpg" alt="Facebook icon">
       <span>Like us on Facebook</span>
     Evince Junctions
     </a>
@@ -729,71 +729,101 @@ Whether you're launching a new website, building an application, improving your 
 
 <form>
 
-<input type="text" placeholder="Full Name" required>
+<label for="name">Full Name</label>
+<input 
+  type="text" 
+  id="name" 
+  name="name"
+  placeholder="Full Name" 
+  required
+>
 
-<input type="email" placeholder="Email Address" required>
+<label for="email">Email Address</label>
+<input 
+  type="email" 
+  id="email" 
+  name="email"
+  placeholder="Email Address" 
+  required
+>
 
-<input type="text" placeholder="Business Name">
+<label for="business">Business Name</label>
+<input 
+  type="text" 
+  id="business" 
+  name="business"
+  placeholder="Business Name"
+>
 
-<input type="tel" placeholder="Phone Number">
+<label for="phone">Phone Number</label>
+<input 
+  type="tel" 
+  id="phone" 
+  name="phone"
+  placeholder="Phone Number"
+>
 
-<div class="service-selection">
-    <p>Services You're Interested In:</p>
-  
-    <label>
-      <input type="checkbox" name="services" value="web-design">
-     <span> Web Design</span>
-    </label>
-  
-    <label>
-      <input type="checkbox" name="services" value="web-development">
-      <span>Web Development</span>
-    </label>
-  
-  
-    <label>
-      <input type="checkbox" name="services" value="seo">
-      <span>SEO</span>
-    </label>
-  
-    <label>
-      <input type="checkbox" name="services" value="analytics">
-      <span>Business Analytics</span>
-    </label>
-  
-    <label>
-      <input type="checkbox" name="services" value="digital-marketing">
-      <span>Digital Marketing</span>
-    </label>
-  
-    <label>
-      <input type="checkbox" name="services" value="strategic-consulting">
-      <span>Strategic Consulting</span>
-    </label>
-  
-    <label>
-      <input type="checkbox" name="services" value="custom-package">
-      <span>Custom Package</span>
-    </label>
-  </div>
+<fieldset class="service-selection">
 
-<select>
+  <legend>Services You're Interested In</legend>
 
-<option>Estimated Budget</option>
+  <label class="service-option">
+    <input type="checkbox" name="services" value="web-design">
+    <span>Web Design</span>
+  </label>
 
-<option>Under $1,000</option>
+  <label class="service-option">
+    <input type="checkbox" name="services" value="web-development">
+    <span>Web Development</span>
+  </label>
 
-<option>$1,000 - $5,000</option>
+  <label class="service-option">
+    <input type="checkbox" name="services" value="seo">
+    <span>SEO</span>
+  </label>
 
-<option>$5,000 - $10,000</option>
+  <label class="service-option">
+    <input type="checkbox" name="services" value="analytics">
+    <span>Business Analytics</span>
+  </label>
 
-<option>$10,000+</option>
+  <label class="service-option">
+    <input type="checkbox" name="services" value="digital-marketing">
+    <span>Digital Marketing</span>
+  </label>
 
+  <label class="service-option">
+    <input type="checkbox" name="services" value="strategic-consulting">
+    <span>Strategic Consulting</span>
+  </label>
+
+  <label class="service-option">
+    <input type="checkbox" name="services" value="custom-package">
+    <span>Custom Package</span>
+  </label>
+
+</fieldset>
+
+<label for="budget">Estimated Budget</label>
+
+<select id="budget" name="budget">
+  <option value="">Estimated Budget</option>
+  <option value="under-1000">Under $1,000</option>
+  <option value="1000-5000">$1,000 - $5,000</option>
+  <option value="5000-10000">$5,000 - $10,000</option>
+  <option value="10000-plus">$10,000+</option>
 </select>
 
-<textarea rows="6" placeholder="Tell us about your project..."></textarea>
+<label for="message">Tell Us About Your Project</label>
 
-<button type="button" onclick="sendMessage()">Send Message</button>
+<textarea 
+  id="message"
+  name="message"
+  rows="6" 
+  placeholder="Tell us about your project..."
+></textarea>
+
+<button type="submit">Send Message</button>
 
 </form>
 
@@ -848,16 +878,20 @@ menu.classList.remove("show");
 });
 
 });
-function sendMessage(){
+function sendMessage() {
 
-const name = document.querySelector('input[placeholder="Full Name"]').value;
-const email = document.querySelector('input[placeholder="Email Address"]').value;
-const business = document.querySelector('input[placeholder="Business Name"]').value;
-const phone = document.querySelector('input[placeholder="Phone Number"]').value;
-const message = document.querySelector('textarea').value;
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const business = document.getElementById("business").value;
+  const phone = document.getElementById("phone").value;
+  const budget = document.getElementById("budget").value;
+  const message = document.getElementById("message").value;
 
+  const selectedServices = Array.from(
+    document.querySelectorAll('input[name="services"]:checked')
+  ).map(checkbox => checkbox.value);
 
-const emailBody = `
+  const emailBody = `
 New Contact Request
 
 Name: ${name}
@@ -865,16 +899,20 @@ Email: ${email}
 Business: ${business}
 Phone: ${phone}
 
+Services Interested In:
+${selectedServices.join(", ") || "None selected"}
+
+Estimated Budget:
+${budget || "Not specified"}
+
 Project Details:
 ${message}
 `;
 
-window.location.href =
-"mailto:evincejunctions@gmail.com?subject=New Website Inquiry&body="
-+ encodeURIComponent(emailBody);
-
-}
-</script>
+  window.location.href =
+    "mailto:evincejunctions@gmail.com?subject=New Website Inquiry&body="
+    + encodeURIComponent(emailBody);
+}</script>
 
 </body>
 </html>
